@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import com.favouriterecipes.favourite.recipes.controller.IngredientController;
 import com.favouriterecipes.favourite.recipes.entity.Ingredients;
 import com.favouriterecipes.favourite.recipes.entity.Recipes;
+import com.favouriterecipes.favourite.recipes.exception.RecipesNotFoundException;
 import com.favouriterecipes.favourite.recipes.repository.IngredientRepository;
 import com.favouriterecipes.favourite.recipes.repository.RecipesRepository;
 import com.favouriterecipes.favourite.recipes.service.RecipesService;
@@ -45,13 +46,15 @@ public class RecipesServiceImpl implements RecipesService {
 		}
 	}
 	
-	public String deleteRecipes(Long recipesId) {
+	public String deleteRecipes(Long recipesId) throws RecipesNotFoundException {
 		
 		String message = "Recipe does not exists, can not be deleted";
 		
 		if (repository.existsById(recipesId)) {
 			repository.deleteById(recipesId);
 			message = "Recipe is deleted successfully";
+		} else {
+			throw new RecipesNotFoundException("Recipes not found");
 		}
 		return message;
 	}
