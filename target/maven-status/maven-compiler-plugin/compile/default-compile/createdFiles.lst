@@ -1,0 +1,11 @@
+com\favouriterecipes\favourite\recipes\controller\RecipesController.class
+com\favouriterecipes\favourite\recipes\entity\Ingredients.class
+com\favouriterecipes\favourite\recipes\service\IngredientService.class
+com\favouriterecipes\favourite\recipes\repository\IngredientRepository.class
+com\favouriterecipes\favourite\recipes\repository\RecipesRepository.class
+com\favouriterecipes\favourite\recipes\entity\Recipes.class
+com\favouriterecipes\favourite\recipes\FavouriteRecipesApplication.class
+com\favouriterecipes\favourite\recipes\serviceImpl\IngredientServiceImpl.class
+com\favouriterecipes\favourite\recipes\service\RecipesService.class
+com\favouriterecipes\favourite\recipes\controller\IngredientController.class
+com\favouriterecipes\favourite\recipes\serviceImpl\RecipesServiceImpl.class
